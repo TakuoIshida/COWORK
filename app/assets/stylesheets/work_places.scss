@@ -1,3 +1,134 @@
 // Place all the styles related to the WorkPlaces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// entire css
+.user_nav {
+  text-align: right;
+  margin: 30px;
+}
+
+.btn > a {
+  color: white;
+  text-decoration: none;
+}
+
+// index css
+.index_container {
+  width: 90%;
+  display: flex;
+  // flex-wrap: wrap;
+  flex-flow: wrap row;
+}
+
+.index_stores {
+  height: 150px;
+  width: 300px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.index_id {
+  float: left;
+}
+.index_name {
+  width: 100%;
+  letter-spacing: 0.1rem;
+}
+.index_region {
+  clear: left;
+  text-align: left;
+  width: 100%;
+  letter-spacing: 0.1rem;
+}
+.index_links {
+  text-align: left;
+}
+.index_pagenation {
+  text-align: center;
+}
+// show css
+.show_section {
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to left, #ff5858, #f09819);
+  border-radius: 5px;
+  padding:20px;
+}
+
+.show_inlineblock {
+  display: flex;
+  color: var(--main-font-color2);
+}
+
+.show_ids {
+  display: inline-block;
+  padding-bottom: 3.5rem;
+  padding-right: 1rem;
+  line-height: 3rem;
+  font-size: 4rem;
+  font-weight: bold;
+  vertical-align: top;
+  border-right: 1px solid var(--main-font-color);
+}
+.show_name_region {
+  width:70%;
+  display: block;
+  height: 100%;
+  padding-left: 1.375rem;
+  padding: 0;
+  font-size:1.5rem;
+}
+.show_name {
+  font-size:1.75rem;
+  padding: 10px;
+  margin: 0 10px;
+  width:100%;
+  letter-spacing: 0.1rem;
+}
+.show_region {
+  width:100%;
+  font-size:1.5rem;
+  padding: 10px;
+  margin: 0 10px;
+}
+.show_photo {
+  width: 200px;
+
+}
+
+.show_name_detail {
+  width: 80%;
+  background-color:var(--main-bg-color);
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 0 10px 20px;
+}
+
+.show_name2 {
+padding: 10px;
+}
+.show_ul {
+  list-style: none;
+}
+.show_link {
+  color: orange;
+  cursor: pointer;
+}
+.show_link:hover {
+  color: orange;
+  opacity: 0.8;
+}
+
+.top {
+  margin: 20px auto 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.top > a {
+  text-decoration: none;
+  color:  white;
+}

@@ -1,37 +1,52 @@
 class WorkPlacesController < ApplicationController
-  before_action :set_work_place, only: [:show, :edit, :update, :destroy]
-
+    protect_from_forgery with: :exception
+    before_action :set_current_user
+    before_action :authenticate_user!
+    #pagination
+    PER = 5
   # GET /work_places
   # GET /work_places.json
   def index
-    @work_places = WorkPlace.all
+    #作成された順に降順で表示（暫定）
+    if user_signed_in?
+      flash.now[:alert] = 'ログインしました'
+      @work_places = WorkPlace.page(params[:page]).per(PER)
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /work_places/1
   # GET /work_places/1.json
+  # =>全てのユーザーが確認可能
   def show
+    if user_signed_in?
+      @work_place = WorkPlace.find(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
-  # GET /work_places/new
+  # =>registerとadminが使用可能
   def new
     @work_place = WorkPlace.new
   end
 
-  # GET /work_places/1/edit
+  # =>registerは自分のcreateしたもののみ、adminが使用可能
   def edit
+    @work_place = WorkPlace.find(params[:id])
   end
 
-  # POST /work_places
-  # POST /work_places.json
+  # =>registerとadminが使用可能
   def create
     @work_place = WorkPlace.new(work_place_params)
 
     respond_to do |format|
       if @work_place.save
-        format.html { redirect_to @work_place, notice: 'Work place was successfully created.' }
+        format.html { redirect_to @work_place, notice: 'ご登録ありがとうございます！' }
         format.json { render :show, status: :created, location: @work_place }
       else
-        format.html { render :new }
+        format.html { render :new, notice: '登録に失敗しました'}
         format.json { render json: @work_place.errors, status: :unprocessable_entity }
       end
     end
@@ -39,10 +54,12 @@ class WorkPlacesController < ApplicationController
 
   # PATCH/PUT /work_places/1
   # PATCH/PUT /work_places/1.json
+  # =>registerは自分のcreateしたもののみ、adminが使用可能
   def update
+    @work_place = WorkPlace.find(params[:id])
     respond_to do |format|
       if @work_place.update(work_place_params)
-        format.html { redirect_to @work_place, notice: 'Work place was successfully updated.' }
+        format.html { redirect_to @work_place, notice: '更新されました' }
         format.json { render :show, status: :ok, location: @work_place }
       else
         format.html { render :edit }
@@ -53,22 +70,25 @@ class WorkPlacesController < ApplicationController
 
   # DELETE /work_places/1
   # DELETE /work_places/1.json
+  # =>registerは自分のcreateしたもののみ、adminが使用可能
   def destroy
+    @work_place = WorkPlace.find(params[:id])
     @work_place.destroy
     respond_to do |format|
-      format.html { redirect_to work_places_url, notice: 'Work place was successfully destroyed.' }
+      format.html { redirect_to work_places_path, notice: '削除されました' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_work_place
-      @work_place = WorkPlace.find(params[:id])
+
+    def set_current_user
+      @user = current_user.id
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_place_params
-      params.require(:work_place).permit(:name, :region, :tel, :url, :image, :user_id)
+      params.require(:work_place).permit(:name, :region, :tel, :url, :address, :opentime, :closetime,:image,:user_id)
     end
 end
