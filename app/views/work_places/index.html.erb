@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Work Places</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Region</th>
+      <th>Tel</th>
+      <th>Url</th>
+      <th>Image</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_places.each do |work_place| %>
+      <tr>
+        <td><%= work_place.name %></td>
+        <td><%= work_place.region %></td>
+        <td><%= work_place.tel %></td>
+        <td><%= work_place.url %></td>
+        <td><%= work_place.image %></td>
+        <td><%= work_place.user_id %></td>
+        <td><%= link_to 'Show', work_place %></td>
+        <td><%= link_to 'Edit', edit_work_place_path(work_place) %></td>
+        <td><%= link_to 'Destroy', work_place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work Place', new_work_place_path %>

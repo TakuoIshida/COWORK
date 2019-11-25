@@ -53,11 +53,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-#img_uploader  CarrierWave
-gem 'carrierwave'
-#画像のリサイズgem
-gem 'mini_magick'
-
 #login
 gem 'devise'
 
@@ -68,7 +63,7 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 
 #view画面のlayout
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 #vue実行用gem
 # gem 'webpacker'
