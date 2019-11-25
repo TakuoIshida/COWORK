@@ -1,34 +1,40 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @work_place.name %>
-</p>
-
-<p>
-  <strong>Region:</strong>
-  <%= @work_place.region %>
-</p>
-
-<p>
-  <strong>Tel:</strong>
-  <%= @work_place.tel %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @work_place.url %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @work_place.image %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @work_place.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_work_place_path(@work_place) %> |
-<%= link_to 'Back', work_places_path %>
+<div class="user_nav">
+  <% if user_signed_in?%>
+  <button class ="btn btn-primary"><%= link_to 'プロフィール変更', edit_user_registration_path%></button>
+  <button class ="btn btn-primary"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete%></button>
+  <% if current_user.role == 'admin' or current_user.role == 'register'%>
+      <button class ="btn btn-success"><%= link_to '編集', edit_work_place_path(@work_place)%></button>
+      <button class ="btn btn-success"><%= link_to '削除', @work_place, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+  <% end %>
+  <% else%>
+  <button class ="btn btn-primary"><%= link_to '新規登録', new_user_registration_path%></button>
+  <button class ="btn btn-primary"><%= link_to 'ログイン', new_user_session_path%></button>
+  <% end %>
+</div>
+<section class="show_section">
+  <div class="show_inlineblock">
+    <div class="show_ids"">No.<%= @work_place.id %></div>
+    <div class="show_name_region">
+      <h2 class="show_name"><%= @work_place.name %></h2>
+      <h3 class="show_region"><%= @work_place.region %></h3>
+    </div>
+  </div>
+<div class="show_photo">
+  <% if @work_place.photo? %>
+  <%= @work_place.photo %>
+  <strong><%= image_tag @work_place.photo.url %></strong>
+    <% end %>
+  </div>
+  <!-- お店の詳細情報 -->
+      <div class="show_name_detail">
+        <h2 class="show_name2"><%= @work_place.name %></h2>
+        <ul class="show_ul">
+          <li>営業時間:<%= @work_place.opentime.present? ? @work_place.opentime : ""%> ~ <%= @work_place.closetime %></li>
+          <li>☎:<%= @work_place.tel %></li>
+          <li>🏠:<%= @work_place.address %></li>
+          <li><%= link_to '店舗ホームぺージ・・',@work_place.url, class:"show_link" %></li>
+        </ul>
+    </div>
+    <div class="top"><%= link_to 'TOP', work_places_path%></div>
+</section>

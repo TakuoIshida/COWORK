@@ -1,6 +1,14 @@
-<h1>Editing Work Place</h1>
+<h1>編集画面</h1>
 
 <%= render 'form', work_place: @work_place %>
+<% if user_signed_in? %>
+<%= link_to '店舗画面Top', @work_place %> | <%= link_to '戻る', work_places_path %>
+<% end %>
 
-<%= link_to 'Show', @work_place %> |
-<%= link_to 'Back', work_places_path %>
+<% if user_signed_in?%>
+<%= link_to 'プロフィール変更', edit_user_registration_path%>
+<%= link_to 'ログアウト', destroy_user_session_path, method: :delete%>
+<% else%>
+<%= link_to '新規登録', new_user_registration_path%>
+<%= link_to 'ログイン', new_user_session_path%>
+<% end %>

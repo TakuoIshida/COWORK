@@ -1,8 +1,8 @@
-<%= form_for(work_place) do |f| %>
+<%= form_with(model: work_place, local: true) do |form| %>
+  <%# error出力 %>
   <% if work_place.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(work_place.errors.count, "error") %> prohibited this work_place from being saved:</h2>
-
+      <h2><%= pluralize(work_place.errors.count, "error") %> error! 保存されませんでした！</h2>
       <ul>
       <% work_place.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,36 +12,54 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_area :name %>
+    <%= form.label :name %>
+    <%= form.text_field :name ,:placeholder => "店名"%>
   </div>
 
   <div class="field">
-    <%= f.label :region %>
-    <%= f.text_area :region %>
+    <%= form.label :region %>
+    <%# <%= form.text_field :region ,:placeholder => "地方"%> %>
+    <%# 後でプルダウンﾘｽﾄ化したい %>
+    <%= select_tag(:region, options_for_select(["東北","関東","中部","信越","関西","中部","四国","九州",]))  ,:placeholder => "地方"%>
   </div>
 
   <div class="field">
-    <%= f.label :tel %>
-    <%= f.number_field :tel %>
+    <%= form.label :tel %>
+    <%= form.number_field :tel ,:placeholder => "09012345678"%>
   </div>
 
   <div class="field">
-    <%= f.label :url %>
-    <%= f.text_area :url %>
+    <%= form.label :address %>
+    <%= form.text_area :address ,:placeholder => "住所"%>
   </div>
 
   <div class="field">
-    <%= f.label :image %>
-    <%= f.text_field :image %>
+    <%= form.label :opentime %>
+    <%= form.time_select :opentime ,:placeholder => "営業開始", include_blank: true%>
   </div>
 
   <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
+    <%= form.label :closetime %>
+    <%= form.time_select :closetime, :placeholder => "営業終了", include_blank: true %>
   </div>
 
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_area :url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image ,:placeholder => "画像をアップロード"%>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :user_id, :value => @user %>
+  </div>
+
+<% if user_signed_in? %>
   <div class="actions">
-    <%= f.submit %>
+    <%= form.submit value:"登録", data: {disable_with: "Now Loading..."}%>
   </div>
+<% end %>
 <% end %>

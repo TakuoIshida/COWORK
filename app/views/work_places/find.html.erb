@@ -1,3 +1,4 @@
+<h1>WrokPlaces Retrieve result</h1>
 
 <div class="user_nav">
   <% if user_signed_in?%>
@@ -10,6 +11,20 @@
   <button class ="btn btn-primary"><%= link_to '新規登録', new_user_registration_path%></button>
   <button class ="btn btn-primary"><%= link_to 'ログイン', new_user_session_path%></button>
   <% end %>
+</div>
+
+<%= @msg %>
+<div class="retrive">
+  <%= form_tag(controller: "workplaces", action: "find") do %>
+  <table>
+  <thead>
+    <tr>
+      <th><%= text.field_tag("find") %></th>
+      <th><%= submit_tag("店舗検索") %></th>
+    </tr>
+  </thead>
+</table>
+    <% end %>
 </div>
 
 <h1>CoworkingSpace's</h1>
