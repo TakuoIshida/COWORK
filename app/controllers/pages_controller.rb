@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def index
+  session.clear
   end
 
   def show

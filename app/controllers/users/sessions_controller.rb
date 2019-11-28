@@ -4,27 +4,28 @@ class Users::SessionsController < Devise::SessionsController
     layout 'devise'
     protect_from_forgery with: :exception
     before_action :authenticate_user!
-  # before_action :configure_sign_in_params, only: [:create]
-
+  
   # DELETE /resource/sign_out
-  def destroy
-    session.clear
-    redirect_to root_path
-  end
+  # def destroy
+  # end
 
   # GET /resource/sign_in
-  def new
-    session.clear
-    super
-  end
+  # def new
+  #   super
+  # end
 
   # POST /resource/sign_in
   # def create
   #   super
   # end
 
-  # protected
-
+  protected
+  #ログイン後
+  def after_sign_in_path_for(resource)
+      work_places_path(resource)
+  end
+      
+  
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])

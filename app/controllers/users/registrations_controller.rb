@@ -6,17 +6,23 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :session_delete
   # before_action :configure_permitted_parameters, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-  def session_delete
-      session.clear
-  end
-
+  
+  # 登録後のセッションをクリアする
+      def session_delete
+          session.clear
+      end
+      
+  #登録後
+      def after_sign_up_path_for(resource)
+        root_path
+      end
+      
   # GET new_user_registration_path ⇒ /users/sign_up
   # def new
   # end
 
   # POST /resource
   # def create
-  # super
   # end
 
   # GET /resource/edit
@@ -50,8 +56,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:role])
   # end
 
-  # The path used after sign up.
-  def after_inactive_sign_up_path_for(resource)
-    render 'root'
-  end
+  # The path used if gmail-error occuerd.
+  # def after_inactive_sign_up_path_for(resource)
+  #   render 'root'
+  # end
 end

@@ -12,6 +12,6 @@ class WorkPlace < ApplicationRecord
   validates :url, format: /\A#{URI::regexp(%w(http https))}\z/,allow_blank: true
 
     #img uploader
-  mount_uploader :image, ImageUploader
+  # mount_uploader :image, ImageUploader
 
 end

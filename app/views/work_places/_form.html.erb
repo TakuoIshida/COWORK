@@ -18,9 +18,9 @@
 
   <div class="field">
     <%= form.label :region %>
-    <%# <%= form.text_field :region ,:placeholder => "地方"%> %>
+    <%= form.text_field :region ,:placeholder => "地方"%>
     <%# 後でプルダウンﾘｽﾄ化したい %>
-    <%= select_tag(:region, options_for_select(["東北","関東","中部","信越","関西","中部","四国","九州",]))  ,:placeholder => "地方"%>
+    <!--<%= select_tag(:region, options_for_select(["東北","関東","中部","信越","関西","中部","四国","九州",]))  ,:placeholder => "地方"%>-->
   </div>
 
   <div class="field">
@@ -48,10 +48,6 @@
     <%= form.text_area :url %>
   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image ,:placeholder => "画像をアップロード"%>
-  </div>
 
   <div class="field">
     <%= form.hidden_field :user_id, :value => @user %>
