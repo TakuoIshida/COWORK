@@ -22,14 +22,10 @@
       <p  class="index_links"><%= link_to 'More・・・', w %></p>
       <div id="app">
         <% if current_user.role == 'admin' or current_user.id == w.user_id%>
-        <button class ="btn btn-success "><%= link_to '編集', edit_work_place_path(w) %></button>
-        <button class ="btn btn-success "><%= link_to '削除', w, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+          <button class ="btn btn-success "><%= link_to '編集', edit_work_place_path(w) %></button>
+          <button class ="btn btn-success "><%= link_to '削除', w, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
         <% end %>
       </div>
     </div>
-    
-    <nav class="index_pagenation">
-      <%= paginate w,window: 2 %>
-    </nav>
   <% end %>
 </div>

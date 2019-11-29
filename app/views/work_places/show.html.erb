@@ -20,10 +20,10 @@
       <h3 class="show_region"><%= @work_place.region %></h3>
     </div>
   </div>
-<div class="show_photo">
-  <% if @work_place.photo? %>
-  <%= @work_place.photo %>
-  <strong><%= image_tag @work_place.photo.url %></strong>
+<div class="show_image">
+  <% if @work_place.image? %>
+  <%= @work_place.image %>
+  <strong><%= image_tag @work_place.image.url %></strong>
     <% end %>
   </div>
   <!-- お店の詳細情報 -->

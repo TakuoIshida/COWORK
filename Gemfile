@@ -72,10 +72,7 @@ gem 'carrierwave'
 #login
 gem 'devise'
 
-#管理画面作成
-gem 'activeadmin'
-#権限管理
-gem 'pundit'
+
 # gem 'activeadmin'
 gem 'sassc'
 #deviseの日本語化
@@ -87,3 +84,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 #error対応
 gem 'rb-readline'
+
+#pagination
+gem 'kaminari', '~> 0.17.0'
+gem 'kaminari-bootstrap', '~> 3.0.1'
