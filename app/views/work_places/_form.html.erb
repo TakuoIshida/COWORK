@@ -10,52 +10,56 @@
         </ul>
       </div>
     <% end %>
-
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name ,:placeholder => "店名"%>
+    
+    <div class="form_div">
+        <table width="100%">
+          <tr class="field">
+            <td width="30%"><%= form.label :name %></td>
+            <td width="70%"><%= form.text_field :name ,:placeholder => "店名"%></td>
+          </tr>
+          
+          <tr class="field">
+            <td><%= form.label :region %></td>
+            <td><%= form.text_field :region ,:placeholder => "地域"%></td>
+            <%# 後でプルダウンﾘｽﾄ化したい %>
+             <!--select_tag(:region, options_for_select(["東北","関東","中部","信越","関西","中部","四国","九州",]))  ,:placeholder => "地方"-->
+          </tr>
+          
+          <tr class="field">
+            <td><%= form.label :TEL %></td>
+            <td><%= form.number_field :tel ,:placeholder => "09012345678"%></td>
+          </tr>
+          <tr class="field">
+            <td><%= form.label :Address %></td>
+            <td><%= form.text_area :address ,:placeholder => "住所"%></td>
+          </tr>
+          
+          <tr class="field">
+            <td><%= form.label :Opentime %></td>
+            <td class="timeselect"><%= form.time_select :opentime ,:placeholder => "営業開始", include_blank: true%></td>
+          </tr>
+          
+          <tr class="field">
+            <td><%= form.label :Closetime %></td>
+            <td class="timeselect"><%= form.time_select :closetime, :placeholder => "営業終了", include_blank: true %></td>
+          </tr>
+          
+          <tr class="field">
+            <td><%= form.label :URL %></td>
+            <td><%= form.text_area :url , :placeholder => "お店のURLを入力してください", include_blank: true %></td>
+          </tr>
+          
+        </table>
+        
+        <div class="field">
+          <%= form.hidden_field :user_id, :value => @user %>
+        </div>
+    
+        <% if user_signed_in? %>
+          <div >
+            <%= form.submit value:"登録", data: {disable_with: "Now Loading..."},class: "btn btn-primary form_actions"%>
+          </div>
+        <% end %>
+         
     </div>
-  
-    <div class="field">
-      <%= form.label :region %>
-      <%= form.text_field :region ,:placeholder => "地方"%>
-      <%# 後でプルダウンﾘｽﾄ化したい %>
-       <!--select_tag(:region, options_for_select(["東北","関東","中部","信越","関西","中部","四国","九州",]))  ,:placeholder => "地方"-->
-    </div>
-  
-    <div class="field">
-      <%= form.label :tel %>
-      <%= form.number_field :tel ,:placeholder => "09012345678"%>
-    </div>
-  
-    <div class="field">
-      <%= form.label :address %>
-      <%= form.text_area :address ,:placeholder => "住所"%>
-    </div>
-  
-    <div class="field">
-      <%= form.label :opentime %>
-      <%= form.time_select :opentime ,:placeholder => "営業開始", include_blank: true%>
-    </div>
-  
-    <div class="field">
-      <%= form.label :closetime %>
-      <%= form.time_select :closetime, :placeholder => "営業終了", include_blank: true %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :url %>
-      <%= form.text_area :url %>
-    </div>
-  
-  
-    <div class="field">
-      <%= form.hidden_field :user_id, :value => @user %>
-    </div>
-
-    <% if user_signed_in? %>
-      <div class="actions">
-        <%= form.submit value:"登録", data: {disable_with: "Now Loading..."}%>
-      </div>
-    <% end %>
 <% end %>

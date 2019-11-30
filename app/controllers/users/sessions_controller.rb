@@ -6,13 +6,15 @@ class Users::SessionsController < Devise::SessionsController
     before_action :authenticate_user!
   
   # DELETE /resource/sign_out
-  # def destroy
-  # end
+  def destroy
+     session.clear
+     redirect_to root_path
+  end
 
   # GET /resource/sign_in
-  # def new
-  #   super
-  # end
+#   def new
+#      super
+#   end
 
   # POST /resource/sign_in
   # def create

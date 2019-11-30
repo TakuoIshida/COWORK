@@ -73,8 +73,9 @@ gem 'carrierwave'
 gem 'devise'
 
 
-# gem 'activeadmin'
+# gem 'sassc'
 gem 'sassc'
+
 #deviseの日本語化
 gem 'devise-i18n'
 gem 'devise-i18n-views'
@@ -88,3 +89,8 @@ gem 'rb-readline'
 #pagination
 gem 'kaminari', '~> 0.17.0'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+
+#jquery-railsがないためerror
+#couldn't find file 'jquery' with type 'application/javascript'
+#https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome
+gem 'jquery-rails'

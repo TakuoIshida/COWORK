@@ -3,6 +3,7 @@
   <% if user_signed_in?%>
   <button class ="btn btn-primary"><%= link_to 'プロフィール変更', edit_user_registration_path%></button>
   <button class ="btn btn-primary"><%= link_to 'ログアウト', destroy_user_session_path,method: :delete %></button>
+  
       <% if current_user.role == 'admin' or current_user.role == 'register'%>
         <button class ="btn btn-primary"><%= link_to '店舗登録', new_work_place_path %></button>
       <% end %>
@@ -23,7 +24,7 @@
       <div id="app">
         <% if current_user.role == 'admin' or current_user.id == w.user_id%>
           <button class ="btn btn-success "><%= link_to '編集', edit_work_place_path(w) %></button>
-          <button class ="btn btn-success "><%= link_to '削除', w, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+          <button class ="btn btn-success "><%= link_to '削除', work_place_path(w), method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
         <% end %>
       </div>
     </div>

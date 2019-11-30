@@ -5,10 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'devise', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://kit.fontawesome.com/41ca430270.js"></script>
+    <%= javascript_include_tag 'pages', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'work_places', 'data-turbolinks-track': 'reload' %>
+    
+        <script src="https://kit.fontawesome.com/41ca430270.js"></script>
   </head>
 
   <body>
