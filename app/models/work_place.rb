@@ -1,7 +1,8 @@
 class WorkPlace < ApplicationRecord
   #後で必要に応じてアソシエーションを設定する
   belongs_to :user
-
+  has_many :comments , dependent: :destroy
+  
   #入力必須項目(name,region,tel)
   validates :name, :region, :tel, presence:{message:'は必須項目です。入力してください'}
   #TEL ⇒重複不可,入力必須

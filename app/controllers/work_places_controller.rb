@@ -9,7 +9,7 @@ class WorkPlacesController < ApplicationController
   def index
     #作成された順に降順で表示（暫定）
     if user_signed_in?
-      flash.now[:alert] = 'ログインしました'
+      # flash[:alert] = 'ログインしました'
       @work_places = WorkPlace.page(params[:page]).per(PER)
     else
       redirect_to root_path
@@ -18,10 +18,12 @@ class WorkPlacesController < ApplicationController
 
   # GET /work_places/1
   # GET /work_places/1.json
-  # =>全てのユーザーが確認可能
+  # =>loginしていれば全てのユーザーが確認可能
   def show
     if user_signed_in?
       @work_place = WorkPlace.find(params[:id])
+      @comment = Comment.new
+      @comment.work_place_id = params[:comment_id]
     else
       redirect_to root_path
     end
@@ -91,4 +93,6 @@ class WorkPlacesController < ApplicationController
     def work_place_params
       params.require(:work_place).permit(:name, :region, :tel, :url, :address, :opentime, :closetime,:image,:user_id)
     end
+    
+    
 end
