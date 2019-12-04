@@ -114,20 +114,32 @@ padding: 10px;
   list-style: none;
 }
 .show_link {
-  color: orange;
-  cursor: pointer;
+  color: black;
+  font-style: bold;
 }
+
 .show_link:hover {
+  cursor: pointer;
   color: orange;
   opacity: 0.8;
 }
 
-.top {
-  margin: 20px auto 0;
+.top, .form_actions{
+  margin: 20px auto;
+  padding: 5px 20px;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
+  border: 1.5px solid white;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ff5858, #f09819);
 }
+
+.top:hover {
+  pointer: cursor;
+  opacity: 0.8;
+}
+
 .top > a {
   text-decoration: none;
   color:  white;
@@ -138,3 +150,40 @@ padding: 10px;
   margin: 30px auto;
   text-align:center;
 }
+
+.form2_content {
+  
+}
+
+.content_label {
+  padding-top: 20px;
+  border-top: 2px solid black;
+  color:  white;
+}
+
+.content_area {
+  width: 80%;
+  height: 120px;
+}
+
+
+.form_actions:hover {
+  pointer: cursor;
+  opacity: 0.8;
+}
+
+.comment_div {
+  margin: 20px auto;
+  width: 80%;
+}
+
+
+.comment_id , .comment_content {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid #4e454a;
+  width: 150px;
+  background: #eee7e0;
+}
+

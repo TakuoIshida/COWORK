@@ -39,11 +39,11 @@
           <li>営業時間:<%= @work_place.opentime.present? ? @work_place.opentime : ""%> ~ <%= @work_place.closetime %></li>
           <li>☎:<%= @work_place.tel %></li>
           <li>🏠:<%= @work_place.address %></li>
-          <li><%= link_to '店舗ホームぺージ・・',@work_place.url, class:"show_link" %></li>
+          <li><%= link_to '店舗Webサイト・・',@work_place.url, class:"show_link" %></li>
         </ul>
       </div>
     
-            <div class="top"><%= link_to 'TOP', work_places_path%></div>
+            <button class="top"><%= link_to 'TOP', work_places_path %></button>
       
       <% if @work_place.comments.nil? %>
         <p><%= "現在コメントは 0件です" %></p>
@@ -52,23 +52,12 @@
       <div class="content_form" >
       <%= render 'form2', comment: @comment %>
       </div>
-      
-        <div>
-          <% @work_place.comments.reverse_each  do |re| %>
-            <table>
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>口コミ</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ユーザID <%= re.id %></td>
-                  <td><%= re.content %></td>
-                </tr>
-              </tbody>
-            </table>
-          <% end %>
-         </div>
+      <div class ="comment_div">
+        <% @work_place.comments.reverse_each  do |re| %>
+          <ul>
+              <li class ="comment comment_id">UserID:<%= current_user.id %>さん</li>
+              <li class ="comment comment_content"><%= re.content %></li>
+          </ul>
+        <% end %>
+      </div>
 </section>
