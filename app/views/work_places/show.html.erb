@@ -36,10 +36,14 @@
       <div class="show_name_detail">
         <h2 class="show_name2"><%= @work_place.name %></h2>
         <ul class="show_ul">
-          <li>営業時間:<%= @work_place.opentime.present? ? @work_place.opentime : ""%> ~ <%= @work_place.closetime %></li>
+          <% if @open_hour.present? %>
+          <li>営業時間: <%= @open_hour %> : <%= @open_min %> ~ <%= @close_hour %> : <%= @close_min %></li>
+          <% end %>
           <li>☎:<%= @work_place.tel %></li>
+          <% if @work_place.address.present? %>
           <li>🏠:<%= @work_place.address %></li>
-          <li><%= link_to '店舗Webサイト・・',@work_place.url, class:"show_link" %></li>
+          <% end %>
+          <li><%= link_to '店舗Webサイト・・', @work_place.url, class:"show_link" %></li>
         </ul>
       </div>
     
@@ -52,12 +56,18 @@
       <div class="content_form" >
       <%= render 'form2', comment: @comment %>
       </div>
-      <div class ="comment_div">
-        <% @work_place.comments.reverse_each  do |re| %>
-          <ul>
-              <li class ="comment comment_id">UserID:<%= current_user.id %>さん</li>
-              <li class ="comment comment_content"><%= re.content %></li>
-          </ul>
-        <% end %>
-      </div>
+      
+      <% @work_place.comments.reverse_each  do |re| %>
+          <section class ="comment_section">
+            
+            <div class ="comment_created_at"><%= re.created_at%></div>
+              <div class="comment_inline">
+                <div class ="comment_id">UserID:<%= current_user.id %>さん</div>
+                <div class ="comment_content">
+                 <p><%= re.content %></p>
+                </div>
+              </div>
+          </section>
+
+      <% end %>
 </section>

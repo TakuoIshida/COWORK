@@ -21,7 +21,14 @@ class WorkPlacesController < ApplicationController
   # =>loginしていれば全てのユーザーが確認可能
   def show
     if user_signed_in?
+      
       @work_place = WorkPlace.find(params[:id])
+      @open_hour = @work_place.opentime.hour
+      @open_min = @work_place.opentime.strftime("%M")
+      @close_hour = @work_place.closetime.hour
+      @close_min = @work_place.closetime.strftime("%M")
+      
+      
       @comment = Comment.new
       @comment.work_place_id = params[:comment_id]
     else
