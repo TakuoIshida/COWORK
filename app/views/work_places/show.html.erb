@@ -60,7 +60,7 @@
       <% @work_place.comments.reverse_each  do |re| %>
           <section class ="comment_section">
             
-            <div class ="comment_created_at"><%= re.created_at%></div>
+            <div class ="comment_created_at"><%= re.created_at.strftime("%Y年/%m月/%d日 %H時 %M分") %></div>
               <div class="comment_inline">
                 <div class ="comment_id">UserID:<%= current_user.id %>さん</div>
                 <div class ="comment_content">

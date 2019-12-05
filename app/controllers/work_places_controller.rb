@@ -28,9 +28,9 @@ class WorkPlacesController < ApplicationController
       @close_hour = @work_place.closetime.hour
       @close_min = @work_place.closetime.strftime("%M")
       
-      
       @comment = Comment.new
       @comment.work_place_id = params[:comment_id]
+      
     else
       redirect_to root_path
     end
