@@ -1,0 +1,38 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+
+ */
+ 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "pages";
+ @import "work_places";
+ @import "devise";
+ @import "comments";
+
+ :root {
+   // gray
+   --main-font-color: #444;
+   // white
+   --main-font-color2: #fff;
+   // // white2
+   --main-bg-color: #D3D3D3;
+   word-wrap: break-word;
+   letter-spacing: 0.1rem;
+   line-height: 1.7;
+ }
+ 
+.container {
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+}

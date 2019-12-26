@@ -7,6 +7,8 @@ ruby '2.4.1'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3','~> 1.3.6'
+#DB for production
+gem 'mysql2', '~> 0.5.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -68,11 +70,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #img_uploader  CarrierWave
 gem 'carrierwave'
-
 #login
 gem 'devise'
-
-
 # gem 'sassc'
 gem 'sassc'
 
@@ -94,3 +93,7 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 #couldn't find file 'jquery' with type 'application/javascript'
 #https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome
 gem 'jquery-rails'
+
+group :production do
+    gem 'unicorn'
+end
