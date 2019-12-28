@@ -3,7 +3,7 @@
 <div class="user_nav">
   <% if user_signed_in?%>
     
-      
+      <div><%= render 'search_form'%></div>
       <button class ="btn btn-primary"><%= link_to 'プロフィール変更', edit_user_registration_path%></button>
       <button class ="btn btn-primary"><%= link_to 'ログアウト', destroy_user_session_path,method: :delete %></button>
   

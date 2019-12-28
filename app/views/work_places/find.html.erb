@@ -1,11 +1,14 @@
-<h1>WrokPlaces Retrieve result</h1>
 
+<h1>検索結果 | CoworkingSpace's</h1>
 <div class="user_nav">
   <% if user_signed_in?%>
-  <button class ="btn btn-primary"><%= link_to 'プロフィール変更', edit_user_registration_path%></button>
-  <button class ="btn btn-primary"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete%></button>
+    
+      <div><%= render 'search_form'%></div>
+      <button class ="btn btn-primary"><%= link_to 'プロフィール変更', edit_user_registration_path%></button>
+      <button class ="btn btn-primary"><%= link_to 'ログアウト', destroy_user_session_path,method: :delete %></button>
+  
       <% if current_user.role == 'admin' or current_user.role == 'register'%>
-        <button class ="btn btn-primary"><%= link_to '店舗登録', new_work_place_path %></button>
+        <button class ="btn btn-warning"><%= link_to '店舗登録', new_work_place_path %></button>
       <% end %>
   <% else%>
   <button class ="btn btn-primary"><%= link_to '新規登録', new_user_registration_path%></button>
@@ -13,21 +16,6 @@
   <% end %>
 </div>
 
-<%= @msg %>
-<div class="retrive">
-  <%= form_tag(controller: "workplaces", action: "find") do %>
-  <table>
-  <thead>
-    <tr>
-      <th><%= text.field_tag("find") %></th>
-      <th><%= submit_tag("店舗検索") %></th>
-    </tr>
-  </thead>
-</table>
-    <% end %>
-</div>
-
-<h1>CoworkingSpace's</h1>
 <div class="index_container">
   <% @work_places.each do |w| %>
     <div class="index_stores">
@@ -37,13 +25,10 @@
       <p  class="index_links"><%= link_to 'More・・・', w %></p>
       <div id="app">
         <% if current_user.role == 'admin' or current_user.id == w.user_id%>
-        <button class ="btn btn-success "><%= link_to '編集', edit_work_place_path(w) %></button>
-        <button class ="btn btn-success "><%= link_to '削除', w, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+          <button class ="btn btn-success "><%= link_to '編集', edit_work_place_path(w) %></button>
+          <button class ="btn btn-success "><%= link_to '削除', work_place_path(w), method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
         <% end %>
       </div>
     </div>
-    <% end %>
-    <nav class="index_pagenation">
-      <%= paginate w,window: 2 %>
-    </nav>
+  <% end %>
 </div>

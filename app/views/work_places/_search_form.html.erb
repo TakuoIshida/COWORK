@@ -1,0 +1,13 @@
+<div class="retrive">
+  <%= search_form_for @search do |f|%>
+      <table>
+          <thead>
+            <tr>
+               <th><%= f.search_field :name_cont %></th>
+              <th><%= f.submit "店舗検索" , data: {disable_with: "Now Loading..."}, class:"btn"%></th>
+            </tr>
+          </thead>
+        </table>
+  <% end %>
+
+</div>

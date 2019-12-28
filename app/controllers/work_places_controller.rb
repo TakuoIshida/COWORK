@@ -7,24 +7,34 @@ class WorkPlacesController < ApplicationController
   # GET /work_places
   # GET /work_places.json
   def index
-    #作成された順に降順で表示（暫定）
+    #作成された順に降順で表示
     if user_signed_in?
       # flash[:alert] = 'ログインしました'
       @work_places = WorkPlace.page(params[:page]).per(PER)
-      # @search_work_places = @search.order(:id).page(params[:page]).per(PER)
+      # 検索オブジェクト
+      @search = WorkPlace.ransack(params[:work_place])  
+      
+      # 検索結果
+      @work_places = @search.result
+      
     else
       redirect_to root_path
     end
   end
+  
+ 
+      def find
+        # 店舗が存在し、店舗名も取得できたら・・・
+        if params[:work_place].present? && params[:work_place][:name]
+          # 検索オブジェクト
+        @search = WorkPlace.ransack(params[:work_place])  
+        #検索内容を小文字にしてあいまい検索 select from `workplaces`.* from `workplaces` where (name LIKE 'OFFICE')
+        @work_places = @search.where('LOWER(name) LIKE ?', "%#{params[:work_place][:name].downcase}%")
+        elsif 
+        @work_places = WorkPlace.all
+        end
+      end
 
-  # def search
-  #   if params[:work_place]
-  #   #あいまい検索 select from `workplaces`.* from `workplaces` where (name LIKE 'OFFICE')
-  #   @search_work_places = WorkPlace.where('LOWER(name) LIKE ?', "%#{params[:work_place][:name].downcase}%")
-  #   elsif 
-  #   @search_work_places = WorkPlace.all
-  #   end
-  # end
 
   # GET /work_places/1
   # GET /work_places/1.json
