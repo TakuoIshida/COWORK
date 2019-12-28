@@ -11,10 +11,20 @@ class WorkPlacesController < ApplicationController
     if user_signed_in?
       # flash[:alert] = 'ログインしました'
       @work_places = WorkPlace.page(params[:page]).per(PER)
+      # @search_work_places = @search.order(:id).page(params[:page]).per(PER)
     else
       redirect_to root_path
     end
   end
+
+  # def search
+  #   if params[:work_place]
+  #   #あいまい検索 select from `workplaces`.* from `workplaces` where (name LIKE 'OFFICE')
+  #   @search_work_places = WorkPlace.where('LOWER(name) LIKE ?', "%#{params[:work_place][:name].downcase}%")
+  #   elsif 
+  #   @search_work_places = WorkPlace.all
+  #   end
+  # end
 
   # GET /work_places/1
   # GET /work_places/1.json

@@ -89,6 +89,9 @@ gem 'rb-readline'
 gem 'kaminari', '~> 0.17.0'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 
+#検索用gem
+gem 'ransack'
+
 #jquery-railsがないためerror
 #couldn't find file 'jquery' with type 'application/javascript'
 #https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome
@@ -97,3 +100,4 @@ gem 'jquery-rails'
 group :production do
     gem 'unicorn'
 end
+

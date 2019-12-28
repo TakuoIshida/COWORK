@@ -1,11 +1,14 @@
 
+<h1>CoworkingSpace's</h1>
 <div class="user_nav">
   <% if user_signed_in?%>
-  <button class ="btn btn-primary"><%= link_to 'プロフィール変更', edit_user_registration_path%></button>
-  <button class ="btn btn-primary"><%= link_to 'ログアウト', destroy_user_session_path,method: :delete %></button>
+    
+      
+      <button class ="btn btn-primary"><%= link_to 'プロフィール変更', edit_user_registration_path%></button>
+      <button class ="btn btn-primary"><%= link_to 'ログアウト', destroy_user_session_path,method: :delete %></button>
   
       <% if current_user.role == 'admin' or current_user.role == 'register'%>
-        <button class ="btn btn-primary"><%= link_to '店舗登録', new_work_place_path %></button>
+        <button class ="btn btn-warning"><%= link_to '店舗登録', new_work_place_path %></button>
       <% end %>
   <% else%>
   <button class ="btn btn-primary"><%= link_to '新規登録', new_user_registration_path%></button>
@@ -13,7 +16,6 @@
   <% end %>
 </div>
 
-<h1>CoworkingSpace's</h1>
 <div class="index_container">
   <% @work_places.each do |w| %>
     <div class="index_stores">
