@@ -121,5 +121,8 @@ class WorkPlacesController < ApplicationController
       params.require(:work_place).permit(:name, :region, :tel, :url, :address, :opentime, :closetime,:image,:user_id)
     end
     
-    
+    def search_params
+      params.require(:q).permit
+    end
 end
+
