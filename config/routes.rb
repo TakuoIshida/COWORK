@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :comments
+ 
+  
   root 'pages#index'
 
   devise_for :users, at: 'users', controllers: {
@@ -9,10 +11,9 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations',
   }
   
-  resources :work_places do
+   resources :work_places do
     resources :comments, only:[:index,:new, :create]
   end
-  
   get 'workplaces/find'
   post 'workplaces/find'
 

@@ -1,34 +1,34 @@
 <%= form_with(model: @comment, url: work_place_comments_path(@work_place.id),method: :post) do |form| %>
-  <% if comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-      <ul>
-      <% comment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <% if comment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
   
-  <div class="field">
-    <%= form.hidden_field :work_place_id, {value:  @work_place.id} %>
-  </div>
-
-  <div class="field form2_content">
-    <h4 class ="content_label">レビューを追加</h4>
-    <%= form.text_area :content ,
-    :placeholder => "気にいったこと/気に入らなかったことは何ですか？
-    最も伝えたいことは何ですか？" ,class: "content_area"%>
-  </div>
-
-  <div class="field">
-    <%= form.hidden_field :user_id, {value: current_user.id} %>
-  </div>
-  <% if user_signed_in? %>
-    <div class="actions">
-      <%= form.submit value:"クチコむ", data: {disable_with: "Now Loading..."},
-      class: "btn btn-primary form_actions"%>
+        <ul>
+        <% comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.hidden_field :work_place_id, {value:  @work_place.id} %>
     </div>
-  <% end %>
+
+    <div class="field form2_content">
+      <h4 class ="content_label">レビューを追加</h4>
+      <%= form.text_area :content ,
+      :placeholder => "気にいったこと/気に入らなかったことは何ですか？
+最も伝えたいことは何ですか？" ,class: "content_area"%>
+    </div>
+  
+    <div class="field">
+      <%= form.hidden_field :user_id, {value: current_user.id} %>
+    </div>
+    <% if user_signed_in? %>
+      <div class="actions">
+        <%= form.submit value:"クチコむ", data: {disable_with: "Now Loading..."},
+        class: "btn btn-primary form_actions"%>
+      </div>
+    <% end %>
   <% end %>

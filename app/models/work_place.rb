@@ -14,5 +14,9 @@ class WorkPlace < ApplicationRecord
 
     #img uploader
   # mount_uploader :image, ImageUploader
-
+  # 曖昧検索用メソッド
+  def self.search(search)
+    return WorkPlace.order(created_at: "DESC").limit(24) unless search
+    WorkPlace.where('LOWER(name) LIKE ?', "%#{[search].downcase}%")
+  end
 end

@@ -1,0 +1,18 @@
+<div class="retrive">
+  <%= search_form_for @search, url: work_places_path do |f|%>
+      <table>
+          <thead>
+            <tr>
+              <!--:name_cont　曖昧検索contain-->
+               <th><%= f.search_field :name_cont,:placeholder => "店舗名を入力" %></th>
+              <th><%= f.submit "店舗検索" , data: {disable_with: "Now Loading..."}, class:"btn"%></th>
+            </tr>
+          </thead>
+          <tr>
+            <th><%= sort_link(@search, :name) -%></th>
+            <th><%= sort_link(@search, :id) -%></th>
+          </tr>
+        </table>
+  <% end %>
+
+</div>
