@@ -21,12 +21,14 @@
     <div class="index_stores">
       <p class="index_id">No.<%= w.id %>|</p>
       <p class="index_name"><%= w.name %></p>
-      <p class="index_region"><%= w.region %></p>
-      <p  class="index_links"><%= link_to 'More・・・', w %></p>
-      <div id="app">
+      <ul class ="index_region_links">
+        <li class="index_region"><%= w.region %></li>
+        <li class="index_links"><%= link_to 'More・・', w %></li>
+      </ul>
+      <div>
         <% if current_user.role == 'admin' or current_user.id == w.user_id%>
-          <button class ="btn btn-success "><%= link_to '編集', edit_work_place_path(w) %></button>
-          <button class ="btn btn-success "><%= link_to '削除', work_place_path(w), method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+          <button class ="btn btn-success index_edit_delete"><%= link_to '編集', edit_work_place_path(w) %></button>
+          <button class ="btn btn-success index_edit_delete"><%= link_to '削除', work_place_path(w), method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
         <% end %>
       </div>
     </div>

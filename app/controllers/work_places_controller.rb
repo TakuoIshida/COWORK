@@ -12,7 +12,7 @@ class WorkPlacesController < ApplicationController
       # flash[:alert] = 'ログインしました'
       @work_places = WorkPlace.page(params[:page]).per(PER)
       # 検索オブジェクト
-      @search = WorkPlace.ransack(params[:work_place])  
+      @search = WorkPlace.ransack(params[:q])  
       
       # 検索結果
       @work_places = @search.result
@@ -23,17 +23,17 @@ class WorkPlacesController < ApplicationController
   end
   
  
-      def find
-        # 店舗が存在し、店舗名も取得できたら・・・
-        if params[:work_place].present? && params[:work_place][:name]
-          # 検索オブジェクト
-        @search = WorkPlace.ransack(params[:work_place])  
-        #検索内容を小文字にしてあいまい検索 select from `workplaces`.* from `workplaces` where (name LIKE 'OFFICE')
-        @work_places = @search.where('LOWER(name) LIKE ?', "%#{params[:work_place][:name].downcase}%")
-        elsif 
-        @work_places = WorkPlace.all
-        end
-      end
+      # def find
+      #   # 店舗が存在し、店舗名も取得できたら・・・
+      #   if params[:work_place].present? && params[:work_place][:name]
+      #     # 検索オブジェクト
+      #   @search = WorkPlace.ransack(params[:work_place])  
+      #   #検索内容を小文字にしてあいまい検索 select from `workplaces`.* from `workplaces` where (name LIKE 'OFFICE')
+      #   @work_places = @search.where('LOWER(name) LIKE ?', "%#{params[:work_place][:name].downcase}%")
+      #   elsif 
+      #   @work_places = WorkPlace.all
+      #   end
+      # end
 
 
   # GET /work_places/1

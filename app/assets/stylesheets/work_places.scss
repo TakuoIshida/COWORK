@@ -3,10 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // entire css
 
-
 .user_nav {
   text-align: right;
-  margin: 30px;
+  margin: 10px;
 }
 
 .btn > a {
@@ -16,18 +15,20 @@
 
 // index css
 .index_container {
-  width: 90%;
+  width: 100%;
   display: flex;
   // flex-wrap: wrap;
   flex-flow: wrap row;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .index_stores {
-  height: 150px;
-  width: 300px;
+  height: 200px;
+  width: 45%;
   border: 1px solid #000;
   border-radius: 10px;
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
 }
 
@@ -38,11 +39,18 @@
   width: 100%;
   letter-spacing: 0.1rem;
 }
+
+.index_region_links {
+  list-style: none;
+  display: flex;
+  flex: wrap;
+  padding: 5px 10px;
+}
 .index_region {
-  clear: left;
   text-align: left;
   width: 100%;
   letter-spacing: 0.1rem;
+  padding-right: 10px;
 }
 .index_links {
   text-align: left;
@@ -50,6 +58,8 @@
 .index_pagenation {
   text-align: center;
 }
+
+
 // show css
 .show_section {
   margin-left: auto;
