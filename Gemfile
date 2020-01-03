@@ -84,7 +84,7 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 
 #view画面のlayout
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 #error対応
 gem 'rb-readline'
