@@ -54,10 +54,11 @@
 }
 .index_links {
   text-align: left;
+  width: 100px;
 }
-.pagination {
-  justify-content: center;
-}
+// .pagination {
+//   justify-content: center;
+// }
 
 /* 検索ボックス */
 dl.searchbox{
@@ -104,7 +105,7 @@ dl.searchbox dd{
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to left, #ff5858, #f09819);
-  border-radius: 5px;
+  border-radius: 10px;
   padding:20px;
 }
 

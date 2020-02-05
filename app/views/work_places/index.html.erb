@@ -1,5 +1,5 @@
 
-<h1>CoworkingSpace-web</h1>
+<h1>CoworkingSpace</h1>
 <div class="user_nav">
   <% if user_signed_in?%>
     
@@ -23,7 +23,11 @@
         <p class="index_name"><%= w.name %></p>
         <ul class ="index_region_links">
           <li class="index_region"><%= w.region %></li>
-          <li class="index_links"><%= link_to 'More・・', w %></li>
+          <li class="index_links">
+            <%= link_to w, method: :get  do %>
+            <i class="fas fa-external-link-alt"></i> 詳細
+            <% end%>
+            </li>
         </ul>
         <div>
           <% if current_user.role == 'admin' or current_user.id == w.user_id%>
