@@ -13,9 +13,8 @@ class WorkPlacesController < ApplicationController
       @work_places = WorkPlace.page(params[:page]).per(PER)
       # 検索オブジェクト
       @search = WorkPlace.ransack(params[:q])  
-      
       # 検索結果
-      # @work_places = @search.result
+      @work_places = @search.result
       
     else
       redirect_to root_path

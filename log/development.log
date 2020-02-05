@@ -6302,3 +6302,317 @@ Processing by WorkPlacesController#index as
 Completed 200 OK in 67ms (Views: 61.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/work_places.1" for 126.83.83.34 at 2020-02-05 21:58:05 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/work_places/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:37
+  Rendered work_places/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 70ms (Views: 64.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/work_places.1" for 126.83.83.34 at 2020-02-05 21:59:22 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/work_places/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:37
+  Rendered work_places/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 1528ms (Views: 1522.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places.1" for 126.83.83.34 at 2020-02-05 22:01:19 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/work_places/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:37
+  Rendered work_places/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 65ms (Views: 59.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places.1" for 126.83.83.34 at 2020-02-05 22:04:10 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/work_places/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:37
+  Rendered work_places/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 1467ms (Views: 1461.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places.1" for 126.83.83.34 at 2020-02-05 22:04:48 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/work_places/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:37
+  Rendered work_places/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 1459ms (Views: 1452.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E3%81%B2%E3%81%AE&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:04:58 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"ひの"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (1.3ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/work_places/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:37
+  Rendered work_places/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 100ms (Views: 92.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E3%81%B2%E3%81%AE&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:05:11 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"ひの"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/work_places/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:37
+  Rendered work_places/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 115ms (Views: 111.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E3%81%B2%E3%81%AE&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:05:16 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"ひの"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/work_places/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:37
+  Rendered work_places/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E3%81%B2%E3%81%AE&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:05:19 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"ひの"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/work_places/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:37
+  Rendered work_places/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E3%81%B2%E3%81%AE&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:05:58 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"ひの"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places" WHERE "work_places"."name" LIKE '%ひの%'[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<WorkPlace::ActiveRecord_Relation:0x00007fbfeba94298>):
+    34:       </div>
+    35:     <% end %>
+    36: </div>
+    37:     <%= paginate @work_places %>
+    38:   
+  
+app/views/work_places/index.html.erb:37:in `_app_views_work_places_index_html_erb__3155751896781438583_70231134623800'
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E3%81%B2%E3%81%AE&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:10:11 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"ひの"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (1.4ms)
+  Rendered work_places/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+    1: 
+    2: <dl class="searchbox">
+    3:   <%= search_form_for @search, url: work_places_path do |f| %>
+    4:     <dt><%= f.text_field :name_cont ,placeholder: '検索するテキストを入力...' %></dt>
+    5:     <dd><%= f.submit ("店舗検索") , data: {disable_with: "Now Loading..."}, class: 'search-btn'%></dd>
+    6:   <% end %>
+  
+app/views/work_places/_search_form.html.erb:3:in `_app_views_work_places__search_form_html_erb__3443027825896103561_70230971501080'
+app/views/work_places/index.html.erb:6:in `_app_views_work_places_index_html_erb__3155751896781438583_70230971469180'
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E3%81%B2%E3%81%AE&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:11:23 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"ひの"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.7ms)
+
+
+  
+  [1m[36mCACHE WorkPlace Load (0.0ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `検索オブジェクト' for #<WorkPlacesController:0x00007fbfd8cc0368>):
+  
+app/controllers/work_places_controller.rb:14:in `index'
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E3%81%B2%E3%81%AE&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:11:39 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"ひの"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:115
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.9ms)
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places" WHERE "work_places"."name" LIKE '%ひの%'[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 83ms (Views: 60.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E3%81%B2%E3%81%AE&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:11:46 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"ひの"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:115
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places" WHERE "work_places"."name" LIKE '%ひの%'[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:11:48 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:115
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.9ms)
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:14:50 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:115
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1469ms (Views: 1465.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:15:28 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:115
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1389ms (Views: 1386.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:15:53 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:115
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.7ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1476ms (Views: 1473.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:17:34 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:115
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (0.8ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 1474ms (Views: 1471.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-05 22:18:01 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:115
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (1.0ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 1482ms (Views: 1478.7ms | ActiveRecord: 0.2ms)
+
+
