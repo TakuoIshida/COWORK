@@ -3,7 +3,7 @@ class WorkPlacesController < ApplicationController
     before_action :set_current_user
     before_action :authenticate_user!
     #pagination
-    PER = 5
+    PER = 4
   # GET /work_places
   # GET /work_places.json
   def index
@@ -15,7 +15,7 @@ class WorkPlacesController < ApplicationController
       @search = WorkPlace.ransack(params[:q])  
       
       # 検索結果
-      @work_places = @search.result
+      # @work_places = @search.result
       
     else
       redirect_to root_path
