@@ -91,7 +91,7 @@ gem 'bootstrap-sass', '>=3.2.0'
 
 
 #pagination
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 
 #検索用gem
